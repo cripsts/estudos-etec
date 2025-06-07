@@ -1,0 +1,248 @@
+/*
+    Arquivo: style.css
+    Descrição: Estilos CSS para o portal educacional de Desenvolvimento de Sistemas.
+    O design é responsivo, limpo e profissional, com foco em legibilidade e navegação intuitiva.
+    Inclui estilos para header, navegação, seções de conteúdo, listas de exercícios, elementos interativos (quizzes, botoes) e responsividade.
+*/
+
+/* Reset básico (opcional) */
+body, h1, h2, p, ul, ol, li, div, nav, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fafafa; /* cor de fundo clara para melhor contraste com texto */
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+}
+header h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+nav {
+    background-color: #333;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* permite quebrar linha se não caber */
+    justify-content: center; /* centraliza os itens horizontalmente */
+    margin: 0 auto;
+}
+nav li {
+    /* Itens da lista sem margens específicas, espaçamento via padding dos links */
+}
+nav a {
+    display: block;
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a:hover {
+    background-color: #555;
+}
+
+/* Layout Principal */
+main {
+    max-width: 1000px;
+    margin: 20px auto; /* centraliza o conteúdo principal */
+    padding: 0 15px; /* espaçamento horizontal interno */
+}
+section {
+    margin-bottom: 40px;
+}
+section h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ccc;
+    color: #333;
+}
+section p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Listas de exercícios */
+ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+li strong {
+    color: #000;
+}
+
+/* Elementos de exemplo e interativos dentro dos exercícios */
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+}
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f9f9f9;
+    padding: 2px 4px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+/* Caixa de exemplo no Desenvolvimento Web (para mudar cor) */
+.caixa-demo {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    border: 2px solid #ccc;
+    margin: 5px 0;
+}
+.caixa-demo.destacado {
+    background-color: #ff0; /* amarelo destaque quando ativo */
+}
+/* LED simulador em Sistemas Embarcados */
+.led {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #555; /* cinza escuro = desligado */
+    margin-right: 10px;
+    border: 2px solid #333;
+}
+.led.on {
+    background-color: red; /* LED aceso em vermelho */
+}
+
+/* Quadro de quizzes (perguntas interativas) */
+.quiz {
+    background-color: #eef;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #99c;
+}
+.quiz label {
+    display: block;
+    margin: 5px 0;
+}
+.quiz button {
+    margin-top: 5px;
+}
+.resultado {
+    margin-left: 10px;
+    font-weight: bold;
+}
+.resultado.correct {
+    color: green;
+}
+.resultado.incorrect {
+    color: red;
+}
+
+/* Rodapé */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+}
+footer p {
+    margin: 5px 0;
+}
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Responsividade: ajustes para telas menores */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        /* Itens empilhados verticalmente em telas pequenas */
+    }
+    nav a {
+        border-top: 1px solid #444;
+    }
+    nav a:first-child {
+        border-top: none;
+    }
+    main {
+        padding: 0 10px;
+    }
+    section h2 {
+        font-size: 1.3em;
+    }
+}
+
+/*
+    A navegação é responsiva: em telas maiores, os itens do menu ficam lado a lado.
+    Em telas menores (max-width 600px), usamos flex-direction: column para empilhar os itens,
+    e adicionamos bordas para separar visualmente cada link do menu.
+*/
+
+/*
+    As seções de conteúdo possuem margens inferiores para separação clara.
+    Cada seção começa com um título (h2) estilizado com uma borda inferior para destaque.
+*/
+
+/*
+    As listas ordenadas (ol) para exercícios têm margem esquerda para indentar os itens.
+    Cada item (li) tem espaçamento inferior para separar um exercício do próximo.
+    O número do exercício é em negrito (strong) para destaque.
+*/
+
+/*
+    Estilizamos <code> e <pre> para mostrar código fonte dentro dos exercícios.
+    Isso inclui fonte monoespaçada e fundo cinza claro para destaque visual do código.
+*/
+
+/*
+    .caixa-demo: representa um elemento de exemplo cuja cor de fundo pode ser alterada via JavaScript.
+    .caixa-demo.destacado: estado ativo dessa caixa (fundo amarelo) após interação do usuário.
+*/
+
+/*
+    .led: representa um LED apagado (um pequeno círculo cinza).
+    .led.on: representa o LED aceso (vermelho).
+    Essa classe é alternada via JavaScript quando o usuário clica no botão para alternar o LED.
+*/
+
+/*
+    .quiz: define o container para as questões de quiz interativas, com fundo azul claro e borda para destaque.
+    .quiz label: deixa cada opção de resposta em uma linha separada.
+    .quiz button: espaçamento superior para separar o botão Verificar das opções.
+    .resultado: estilo base para o texto de feedback da resposta (margem esquerda e negrito).
+    .resultado.correct: texto verde para resposta correta.
+    .resultado.incorrect: texto vermelho para resposta errada.
+*/
+
+/*
+    O rodapé é simples, com fundo escuro combinando com o cabeçalho,
+    e texto centralizado. Inclui um link para voltar ao topo da página.
+*/
+
+/* Estilos de fundo diferenciados para cada seção (opcional, para ilustrar visualmente seções distintas) */
+#bd { background-color: #f0f8ff; /* azul claro bem suave */ }
+#programacao { background-color: #f0fff0; /* verde claro bem suave */ }
+#web { background-color: #fffaf0; /* amarelo/quase laranja claro bem suave */ }
+#fundamentos { background-color: #f8fff8; /* quase branco com tom esverdeado */ }
+#analise { background-color: #f8f0ff; /* roxo claro bem suave */ }
+#qualidade { background-color: #f8f8f8; /* cinza claríssimo */ }
+#embarcados { background-color: #f0f0f8; /* outro tom suave de cinza/azul */ }

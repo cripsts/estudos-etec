@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revisão Desenvolvimento de Sistemas</title>
+  <link rel="stylesheet" href="style.css">  <!-- Importa o arquivo de estilos CSS -->
+</head>
+<body>
+  <!-- Cabeçalho do site com título e menu de navegação -->
+  <header>
+    <h1>Revisão – Desenvolvimento de Sistemas</h1>
+    <nav>
+      <ul class="menu">
+        <!-- Lista de disciplinas para navegação; ao clicar em uma, inicia o quiz daquela matéria -->
+        <li><a href="#" onclick="startSubject('BD')">Banco de Dados I &amp; II</a></li>
+        <li><a href="#" onclick="startSubject('PRG')">Programação (TPA, APS, PAM)</a></li>
+        <li><a href="#" onclick="startSubject('WEB')">Desenvolvimento Web (PW I–III)</a></li>
+        <li><a href="#" onclick="startSubject('FI')">Fund. &amp; Infraestrutura (FI, IPSSI)</a></li>
+        <li><a href="#" onclick="startSubject('AP')">Análise &amp; Projeto (A&amp;P, DDS)</a></li>
+        <li><a href="#" onclick="startSubject('QTS')">Qualidade &amp; Testes (QTS)</a></li>
+        <li><a href="#" onclick="startSubject('SE')">Sistemas Embarcados (SE)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Área principal onde serão exibidas as perguntas e respostas do quiz -->
+  <main>
+    <section id="quiz-area">
+      <!-- Mensagem inicial antes de selecionar uma disciplina -->
+      <div id="welcome">
+        <p>Bem-vindo! Selecione uma disciplina acima para iniciar a revisão.</p>
+      </div>
+      <!-- Contêiner do quiz (inicialmente oculto, será exibido quando uma disciplina for escolhida) -->
+      <div id="quiz-container" style="display:none;">
+        <h2 id="subject-title"></h2>              <!-- Título da disciplina selecionada -->
+        <p id="question-explanation"></p>        <!-- Texto de explicação antes da pergunta -->
+        <div id="question-text"></div>           <!-- Enunciado da pergunta atual -->
+        <div id="options-list"></div>            <!-- Lista de opções (alternativas) da pergunta -->
+        <button id="check-btn" onclick="checkAnswer()">Verificar</button>  <!-- Botão para verificar resposta -->
+        <!-- Área de feedback exibida após responder (certo/errado + explicação e botão Próxima) -->
+        <div id="feedback" style="display:none;">
+          <p id="result-text"></p>          <!-- Texto de resultado: "Resposta Correta!" ou "Resposta Incorreta." -->
+          <p id="answer-explanation"></p>   <!-- Explicação adicional exibida após responder -->
+          <button id="next-btn" onclick="nextQuestion()">Próxima Pergunta</button>  <!-- Botão para próxima pergunta -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé do site -->
+  <footer>
+    <p>&copy; 2025 Curso Técnico em Desenvolvimento de Sistemas</p>
+  </footer>
+
+  <!-- Importa o arquivo JavaScript com a lógica do quiz -->
+  <script src="script.js"></script>
+</body>
+</html>

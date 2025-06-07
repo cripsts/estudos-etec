@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<!--
+  Este arquivo index.html foi gerado para um site educacional destinado a alunos do curso
+    Requisitos do projeto:
+    - Seções separadas para as disciplinas: Banco de Dados I & II; Programação (TPA, APS, PAM); Desenvolvimento Web (PW I–III); Fundamentos & Infraestrutura (FI, IPSSI); Análise & Projeto (A&P, DDS); Qualidade & Testes (QTS); Sistemas Embarcados (SE).
+    - Cada matéria possui pelo menos 15 exercícios exclusivos, diversos e bem elaborados.
+    - Conteúdo com explicações completas, exemplos práticos, interatividade (quizzes, campos de entrada, simuladores, código executável em JS) e navegação intuitiva.
+    - Design visual limpo, responsivo e profissional.
+    - Site adequado para uso coletivo entre estudantes, como ferramenta de reforço, aprendizado prático e revisão.
+    - Todo o conteúdo está em português e utiliza terminologia técnica adequada.
+    - Alta qualidade pedagógica garantida com clareza nos exemplos.
+  Todo o conteúdo está em português e bem estruturado.
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Educacional - Desenvolvimento de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Cabeçalho e Navegação -->
+    <header id="top">
+        <h1>Portal Educacional - Desenvolvimento de Sistemas</h1>
+        <nav>
+            <ul>
+                <li><a href="#bd">Banco de Dados I &amp; II</a></li>
+                <li><a href="#programacao">Programação (TPA, APS, PAM)</a></li>
+                <li><a href="#web">Desenvolvimento Web (PW I–III)</a></li>
+                <li><a href="#fundamentos">Fundamentos &amp; Infraestrutura (FI, IPSSI)</a></li>
+                <li><a href="#analise">Análise &amp; Projeto (A&amp;P, DDS)</a></li>
+                <li><a href="#qualidade">Qualidade &amp; Testes (QTS)</a></li>
+                <li><a href="#embarcados">Sistemas Embarcados (SE)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Conteúdo Principal: seções para cada matéria e seus exercícios -->
+    <main>
+        <!-- Seção Banco de Dados I & II -->
+        <section id="bd">
+            <h2>Banco de Dados I &amp; II</h2>
+            <p>Nesta seção, abordamos conceitos de Banco de Dados desenvolvidos nas disciplinas Banco de Dados I e II. Você encontrará exercícios sobre SQL (consultas, junções, modificação de dados), modelagem e normalização de dados, transações, índices, além de noções de segurança (SQL Injection) e comparação entre bancos relacionais e NoSQL. Os exercícios a seguir ajudarão a fixar esses conteúdos, com explicações e exemplos práticos.</p>
+            <ol>
+                <li><strong>Exercício 1:</strong> Defina o termo <strong>banco de dados</strong> e explique a diferença entre um banco de dados e um <em>SGBD</em> (Sistema de Gestão de Banco de Dados).</li>
+
+                <li><strong>Exercício 2:</strong> Considere uma tabela <code>Clientes</code> com colunas <code>Nome</code>, <code>Idade</code> e <code>Cidade</code>. Escreva uma consulta SQL para selecionar todos os clientes que tenham idade maior que 18 anos.</li>
+
+                <li><strong>Exercício 3:</strong> Suponha que você tenha duas tabelas: <code>Pedidos</code> e <code>Clientes</code>, onde <code>Pedidos.ClienteID</code> é uma chave estrangeira para <code>Clientes.ID</code>. Escreva uma consulta SQL para listar os pedidos juntamente com o nome do cliente correspondente.</li>
+
+                <li><strong>Exercício 4:</strong> Crie uma instrução SQL <code>CREATE TABLE</code> para criar uma tabela <code>Produtos</code> com colunas apropriadas (ID, nome, preço, quantidade em estoque). Defina a chave primária e um campo que não possa ser nulo.</li>
+
+                <li><strong>Exercício 5:</strong> Explique o que é <strong>normalização</strong> de banco de dados e liste os três primeiras formas normais (1FN, 2FN, 3FN) de forma resumida.</li>
+
+                <li><strong>Exercício 6:</strong> Você tem uma tabela <code>Funcionarios</code> com colunas <code>Nome</code>, <code>Departamento</code> e <code>Salario</code>. Escreva uma consulta SQL usando uma função de agregação para encontrar o salário médio dos funcionários do departamento 'Vendas'.</li>
+
+                <li><strong>Exercício 7:</strong> Explique a diferença entre os comandos SQL <code>DELETE</code> e <code>TRUNCATE</code>. Quando seria adequado usar cada um?</li>
+
+                <li><strong>Exercício 8:</strong> O que é uma <strong>chave primária</strong> e uma <strong>chave estrangeira</strong>? Dê um exemplo de como definir cada uma em uma tabela SQL.</li>
+
+                <li><strong>Exercício 9:</strong> Escreva um comando SQL <code>INSERT</code> para adicionar um novo registro na tabela <code>Clientes</code> (colunas Nome, Idade, Cidade) com valores de exemplo.</li>
+
+                <li><strong>Exercício 10:</strong> Considere a tabela <code>Produtos</code> criada anteriormente. Escreva um comando SQL <code>UPDATE</code> para aumentar em 10% o preço de todos os produtos do fabricante 'ABC'.</li>
+
+                <li><strong>Exercício 11:</strong> Explique o conceito de <strong>transação</strong> em bancos de dados. Como as transações garantem a integridade dos dados? Forneça um exemplo simples de transação (pode ser pseudocódigo SQL).</li>
+
+                <li><strong>Exercício 12:</strong> Qual a finalidade de um <strong>índice</strong> em um banco de dados relacional? Dê um exemplo de situação em que a criação de um índice pode melhorar o desempenho de consultas.</li>
+
+                <li><strong>Exercício 13:</strong> Descreva brevemente o que é <strong>SQL Injection</strong> e como os desenvolvedores podem prevenir esse tipo de vulnerabilidade em aplicações que usam banco de dados.</li>
+
+                <li><strong>Exercício 14:</strong> Explique a diferença entre um banco de dados relacional e um banco de dados NoSQL. Cite um exemplo de situação em que um banco NoSQL seria mais adequado.</li>
+
+                <li><strong>Exercício 15:</strong> Suponha que você tenha uma tabela <code>LogAcessos</code> que registra os logins dos usuários com colunas <code>UsuarioID</code>, <code>DataHora</code> e <code>Sucesso</code> (booleano). Escreva uma consulta SQL para obter o total de logins bem-sucedidos (Sucesso = TRUE) por usuário.</li>
+
+            </ol>
+            <div class="quiz">
+                <strong>Quiz:</strong> Qual das seguintes cláusulas SQL é usada para filtrar os resultados de uma consulta com base em uma condição?<br/>
+                <label><input type="radio" name="q_bd_where" value="A"/> SELECT</label><br/>
+                <label><input type="radio" name="q_bd_where" value="B"/> WHERE</label><br/>
+                <label><input type="radio" name="q_bd_where" value="C"/> JOIN</label><br/>
+                <label><input type="radio" name="q_bd_where" value="D"/> ORDER BY</label><br/>
+                <button class="quiz-btn" data-quiz="q_bd_where" data-answer="B" data-result="res_bd_where">Verificar</button> <span id="res_bd_where" class="resultado"></span>
+            </div>
+        </section>
+
+        <!-- Seção Programação (TPA, APS, PAM) -->
+        <section id="programacao">
+            <h2>Programação (TPA, APS, PAM)</h2>
+            <p>Esta seção abrange vários tópicos de programação e algoritmos correspondentes às disciplinas TPA, APS e PAM. Os exercícios incluem desde lógica de programação básica (pseudocódigos, uso de variáveis, estruturas de decisão e laços) até conceitos de estruturas de dados (como pilhas e filas) e algoritmos de ordenação. Também são abordados princípios de programação orientada a objetos (classes, herança) e noções de desenvolvimento móvel (aplicativos nativos vs híbridos). Estes exercícios proporcionarão prática na escrita e análise de código, além de reforçar conceitos teóricos importantes.</p>
+            <ol>
+                <li><strong>Exercício 1:</strong> Escreva um pseudocódigo (ou algoritmo em portugol) que leia dois números fornecidos pelo usuário e exiba a soma deles. Explique brevemente como seu algoritmo funciona.</li>
+
+                <li><strong>Exercício 2:</strong> Considere o seguinte trecho de código:<br/><pre><code>int x = 0;<br/>for (int i = 1; i &lt;= 5; i++) {<br/>    x += i;<br/>}<br/>printf("%d", x);</code></pre>Qual será a saída (output) desse programa? Explique por quê.</li>
+
+                <li><strong>Exercício 3:</strong> Explique o que é um <strong>array (vetor)</strong> em programação e como os elementos são indexados. Dê um exemplo de como declarar e acessar elementos de um array em uma linguagem de programação de sua escolha.</li>
+
+                <li><strong>Exercício 4:</strong> Implemente uma função que calcule o fatorial de um número inteiro. Para praticar, insira um número abaixo e clique em <em>Calcular</em> para ver o resultado do fatorial calculado pelo script:<br/>
+                    <!-- Campo de entrada e botão para cálculo do fatorial -->
+                    <input type="number" id="numFatorial" placeholder="Digite um número"/> <button id="btnFatorial">Calcular</button> <span id="resFatorial" class="resultado"></span></li>
+
+                <li><strong>Exercício 5:</strong> O que é uma <strong>função</strong> (ou método) em programação? Explique sua utilidade e como se define uma função simples que retorna a média de dois números.</li>
+
+                <li><strong>Exercício 6:</strong> Explique a diferença entre os operadores lógicos <code>AND</code> (E) e <code>OR</code> (OU) em programação. Dê um exemplo de condição usando cada um deles.</li>
+
+                <li><strong>Exercício 7:</strong> Em programação orientada a objetos (POO), o que são <strong>classe</strong> e <strong>objeto</strong>? Explique usando um exemplo prático (por exemplo, classe <em>Carro</em> e objetos <em>Carro</em> específicos).</li>
+
+                <li><strong>Exercício 8:</strong> Ainda sobre POO, explique o conceito de <strong>herança</strong>. Como a herança pode evitar repetição de código? Dê um exemplo simples envolvendo classes (por exemplo, uma classe base <em>Veiculo</em> e classes derivadas).</li>
+
+                <li><strong>Exercício 9:</strong> O que são <strong>estrutura de dados</strong> <em>pilha</em> (stack) e <em>fila</em> (queue)? Descreva como cada uma funciona (LIFO vs FIFO) e dê um exemplo de situação para usar cada uma.</li>
+
+                <li><strong>Exercício 10:</strong> Explique brevemente como funciona o algoritmo de ordenação <strong>Bubble Sort</strong>. Qual é a complexidade de tempo desse algoritmo no pior caso?</li>
+
+                <li><strong>Exercício 11:</strong> O que significa dizer que um algoritmo tem complexidade de tempo <em>O(n)</em> ou <em>O(log n)</em>? Compare os dois conceitos com um exemplo prático.</li>
+
+                <li><strong>Exercício 12:</strong> No contexto de desenvolvimento móvel, qual a diferença entre um aplicativo <strong>nativo</strong> e um <strong>híbrido</strong>? Dê exemplos de tecnologias usadas para cada tipo.</li>
+
+                <li><strong>Exercício 13:</strong> Quais são duas das principais linguagens de programação usadas para desenvolver aplicações móveis em <strong>Android</strong> e <strong>iOS</strong>, respectivamente?</li>
+
+                <li><strong>Exercício 14:</strong> Explique a diferença entre <strong>compilação</strong> e <strong>interpretação</strong> de um programa. O que acontece em cada processo?</li>
+
+                <li><strong>Exercício 15:</strong> O que é <strong>recursão</strong> em programação? Dê um exemplo de uma função recursiva simples (por exemplo, cálculo de Fibonacci ou fatorial) e explique como a recursão termina.</li>
+
+            </ol>
+        </section>
+
+        <!-- Seção Desenvolvimento Web (PW I–III) -->
+        <section id="web">
+            <h2>Desenvolvimento Web (PW I–III)</h2>
+            <p>Esta seção explora conteúdos de Desenvolvimento Web correspondentes às disciplinas PW I, II e III. São abordados os fundamentos de criação de páginas web com HTML e CSS, incluindo estilização e design responsivo, além de boas práticas de acessibilidade. Também cobrimos a programação client-side com JavaScript para adicionar interatividade às páginas (manipulação do DOM) e conceitos de comunicação web (como requisições HTTP GET/POST e AJAX para conteúdo dinâmico). Os exercícios seguintes vão testar seus conhecimentos em estrutura de código HTML, seleção e aplicação de estilos CSS, e criação de funcionalidades interativas com JavaScript.</p>
+            <ol>
+                <li><strong>Exercício 1:</strong> Explique a diferença entre <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>. Qual papel cada uma dessas tecnologias desempenha no desenvolvimento web?</li>
+
+                <li><strong>Exercício 2:</strong> Qual tag HTML é utilizada para criar um hyperlink (link clicável) para outra página? Escreva um exemplo de código usando essa tag.</li>
+
+                <li><strong>Exercício 3:</strong> O que é <strong>CSS</strong> e como ele é utilizado em conjunto com o HTML? Forneça um exemplo de uma regra CSS simples que mude a cor de texto de um parágrafo para azul.</li>
+
+                <li><strong>Exercício 4:</strong> Escreva um pequeno trecho de código HTML para criar um formulário com um campo de texto para nome e um botão de envio.</li>
+
+                <li><strong>Exercício 5:</strong> Como você pode incluir um arquivo CSS externo em uma página HTML? Demonstre com um exemplo de código usando a tag apropriada no <code>&lt;head&gt;</code> do HTML.</li>
+
+                <li><strong>Exercício 6:</strong> Explique com suas palavras o que é o <strong>DOM (Document Object Model)</strong> e como o JavaScript pode ser usado para manipular elementos da página via DOM.</li>
+
+                <li><strong>Exercício 7:</strong> O que é um elemento HTML <strong>semântico</strong>? Dê dois exemplos de tags semânticas em HTML5 e explique por que o uso de tags semânticas é importante.</li>
+
+                <li><strong>Exercício 8:</strong> Qual a diferença entre os métodos HTTP <code>GET</code> e <code>POST</code> ao enviar dados de um formulário? Em que situação cada método deve ser utilizado?</li>
+
+                <li><strong>Exercício 9:</strong> Explique brevemente o que acontece quando você digita um URL no navegador e aperta Enter. Descreva o papel do cliente (navegador) e do servidor web nesse processo.</li>
+
+                <li><strong>Exercício 10:</strong> O que é <strong>JavaScript</strong> e onde esse código é executado? Dê um exemplo de funcionalidade interativa que pode ser implementada com JavaScript em uma página web.</li>
+
+                <li><strong>Exercício 11:</strong> O que significa design <strong>responsivo</strong> em desenvolvimento web? Como as <em>media queries</em> em CSS permitem ajustar o layout para diferentes tamanhos de tela?</li>
+
+                <li><strong>Exercício 12:</strong> Explique o conceito de <strong>acessibilidade</strong> na web. Cite uma prática ou ferramenta que pode tornar um site mais acessível para usuários com necessidades especiais.</li>
+
+                <li><strong>Exercício 13:</strong> Para que serve o atributo <code>'alt'</code> em uma tag <code>&lt;img&gt;</code> no HTML? Por que é importante fornecê-lo sempre que uma imagem é inserida em uma página?</li>
+
+                <li><strong>Exercício 14:</strong> Abaixo, você encontra um elemento de texto e um botão. Implemente o código JavaScript para que, ao clicar no botão, a cor de fundo do elemento mude. Teste clicando em <em>Mudar Cor</em>:<br/>
+                    <!-- Elemento de exemplo e botão para mudar cor via JS -->
+                    <div id="caixaDemo" class="caixa-demo">Caixa de exemplo</div> <button id="btnCor">Mudar Cor</button></li>
+
+                <li><strong>Exercício 15:</strong> O que é AJAX (XMLHttpRequest/fetch) e como essa técnica melhora a experiência do usuário em aplicações web dinâmicas?</li>
+
+            </ol>
+        </section>
+
+        <!-- Seção Fundamentos & Infraestrutura (FI, IPSSI) -->
+        <section id="fundamentos">
+            <h2>Fundamentos &amp; Infraestrutura (FI, IPSSI)</h2>
+            <p>Esta seção abrange Fundamentos e Infraestrutura de TI correspondentes às disciplinas FI e IPSSI. São abordados conceitos básicos de hardware e software, arquitetura de computadores, representação de informações em números binários e conversões de base. Também exploramos o papel dos sistemas operacionais (gestão de processos, memória, etc.), além de princípios de virtualização. Na parte de redes, são apresentados conceitos de infraestrutura de comunicação (diferença entre redes LAN e WAN, dispositivos como roteadores e switches, endereços IP e o modelo OSI). Por fim, são incluídos princípios básicos de segurança da informação (firewalls e a tríade CID - confidencialidade, integridade, disponibilidade). Os exercícios a seguir permitem reforçar e aplicar esses conhecimentos fundamentais.</p>
+            <ol>
+                <li><strong>Exercício 1:</strong> Explique, com suas palavras, a diferença entre <strong>hardware</strong> e <strong>software</strong>. Dê dois exemplos de cada.</li>
+
+                <li><strong>Exercício 2:</strong> Quais são os principais componentes de hardware de um computador? (Cite pelo menos 3, por exemplo: CPU, Memória RAM, HD/SSD) e descreva brevemente a função de cada um.</li>
+
+                <li><strong>Exercício 3:</strong> O que significa dizer que um computador trabalha com <strong>bits</strong> e <strong>bytes</strong>? Quantos bits há em um byte, e para que servem os prefixos como KB, MB, GB?</li>
+
+                <li><strong>Exercício 4:</strong> Computadores usam representações binárias para dados. Quantos valores diferentes podem ser representados com 1 byte? E com 2 bytes?</li>
+
+                <li><strong>Exercício 5:</strong> Converta o número decimal 25 para a base binária (base 2). Qual será o resultado? (Explique o processo de conversão.)</li>
+
+                <li><strong>Exercício 6:</strong> Para praticar conversão de base, insira um número decimal abaixo e clique em <em>Converter</em> para ver seu valor em binário:<br/>
+                    <!-- Campo de entrada e botão para converter decimal em binário -->
+                    <input type="number" id="numDecimal" placeholder="Número decimal"/> <button id="btnConverter">Converter</button> <span id="resBinario" class="resultado"></span></li>
+
+                <li><strong>Exercício 7:</strong> O que é um <strong>sistema operacional</strong> (SO)? Cite duas funções importantes que um SO desempenha em um computador.</li>
+
+                <li><strong>Exercício 8:</strong> Explique a diferença entre <strong>processo</strong> e <strong>thread</strong>. Por que o uso de threads pode tornar um programa mais eficiente?</li>
+
+                <li><strong>Exercício 9:</strong> O que é <strong>virtualização</strong> em contexto de TI? Dê um exemplo de como a virtualização é utilizada (por exemplo, máquinas virtuais ou conteinerização).</li>
+
+                <li><strong>Exercício 10:</strong> Explique brevemente a diferença entre uma <strong>rede LAN</strong> e uma <strong>rede WAN</strong>. Dê um exemplo de cada.</li>
+
+                <li><strong>Exercício 11:</strong> O que é o <strong>modelo OSI</strong>? Liste as 7 camadas do modelo OSI e a finalidade geral de se ter esse modelo de referência.</li>
+
+                <li><strong>Exercício 12:</strong> Qual a diferença entre um <strong>roteador</strong> e um <strong>switch</strong> na infraestrutura de redes? Onde cada um é utilizado?</li>
+
+                <li><strong>Exercício 13:</strong> O que é um <strong>endereço IP</strong> e para que ele serve? Explique também a diferença entre IPv4 e IPv6 de forma resumida.</li>
+
+                <li><strong>Exercício 14:</strong> O que é um <strong>firewall</strong> e qual é sua função na segurança de redes de computadores?</li>
+
+                <li><strong>Exercício 15:</strong> Segurança da informação é um assunto importante em infraestrutura. Explique brevemente os três princípios básicos da segurança (confidencialidade, integridade e disponibilidade).</li>
+
+            </ol>
+        </section>
+
+        <!-- Seção Análise & Projeto (A&P, DDS) -->
+        <section id="analise">
+            <h2>Análise &amp; Projeto (A&amp;P, DDS)</h2>
+            <p>Esta seção abrange conceitos das disciplinas de Análise &amp; Projeto de Sistemas (A&amp;P) e de Desenho/Documentação de Sistemas (DDS). São explorados temas como levantamento e especificação de requisitos (funcionais e não funcionais), técnicas de modelagem com a linguagem UML (diagramas de casos de uso, classes, sequência, atividades, implantação, etc.), além de metodologias de desenvolvimento de software (cascata vs ágil) e boas práticas de planejamento e documentação de projetos. Os exercícios a seguir vão desde diferenças entre fases de análise e projeto até questões sobre diversos diagramas UML e prototipação, reforçando a importância de modelar e documentar bem um sistema antes da implementação.</p>
+            <ol>
+                <li><strong>Exercício 1:</strong> Qual a diferença entre a fase de <strong>análise de sistemas</strong> e a fase de <strong>projeto de sistemas</strong> em um processo de desenvolvimento? O que cada fase produz como resultado?</li>
+
+                <li><strong>Exercício 2:</strong> O que é a linguagem de modelagem <strong>UML</strong> e qual a sua importância no processo de análise e projeto de sistemas? Cite ao menos três tipos de diagramas que fazem parte da UML.</li>
+
+                <li><strong>Exercício 3:</strong> O que é um <strong>requisito de software</strong>? Explique a diferença entre requisitos funcionais e não funcionais e dê um exemplo de cada.</li>
+
+                <li><strong>Exercício 4:</strong> Cite uma técnica utilizada para levantamento de requisitos junto aos usuários e descreva como ela é realizada (por exemplo: entrevistas, questionários, observação, etc.).</li>
+
+                <li><strong>Exercício 5:</strong> Explique o que representa um <strong>Diagrama de Casos de Uso</strong> na UML. Quais são seus principais elementos e qual é o objetivo desse diagrama?</li>
+
+                <li><strong>Exercício 6:</strong> Em UML, o que é um <strong>Diagrama de Classes</strong>? Que tipo de informação é modelada nesse diagrama? Dê um exemplo de duas classes simples e uma associação entre elas (por exemplo, classe <em>Aluno</em> e classe <em>Curso</em>).</li>
+
+                <li><strong>Exercício 7:</strong> No contexto de POO e diagrama de classes, explique a diferença entre um <strong>relacionamento de agregação</strong> e um de <strong>composição</strong>. Dê um exemplo de cada (por exemplo: <em>Carro</em> e <em>Roda</em> para composição).</li>
+
+                <li><strong>Exercício 8:</strong> O que é um <strong>Diagrama de Sequência</strong> na UML e o que ele representa? Em que situações esse diagrama é útil durante o desenvolvimento de sistemas?</li>
+
+                <li><strong>Exercício 9:</strong> Explique para que serve um <strong>Diagrama de Atividades</strong> ou um fluxograma. Como ele pode ajudar a compreender o fluxo de um processo ou algoritmo?</li>
+
+                <li><strong>Exercício 10:</strong> Qual a importância de se realizar a modelagem (diagramas, protótipos, etc.) antes de começar a implementação de um sistema? Dê duas razões que justificam esse esforço na fase de análise/projeto.</li>
+
+                <li><strong>Exercício 11:</strong> O que é um <strong>protótipo de software</strong>? Como protótipos podem auxiliar no processo de análise de requisitos e no projeto da interface do usuário?</li>
+
+                <li><strong>Exercício 12:</strong> Explique brevemente a diferença entre a abordagem de desenvolvimento <strong>tradicional (cascata)</strong> e a <strong>ágil</strong>. Quais são as principais características de uma metodologia ágil, como o Scrum?</li>
+
+                <li><strong>Exercício 13:</strong> Em gerência de projetos de software, o que é o <strong>escopo</strong> do projeto e por que é importante defini-lo claramente na fase de planejamento?</li>
+
+                <li><strong>Exercício 14:</strong> Por que a <strong>documentação</strong> é importante em análise e projeto de sistemas? Dê um exemplo de um documento importante e como ele é utilizado pela equipe de desenvolvimento.</li>
+
+                <li><strong>Exercício 15:</strong> O que é um <strong>Diagrama de Implantação</strong> (Deployment Diagram) na UML e qual é seu propósito? Que tipo de informação ele representa sobre o sistema de software?</li>
+
+            </ol>
+            <div class="quiz">
+                <strong>Quiz:</strong> Qual dos diagramas UML a seguir é utilizado para representar as interações ao longo do tempo entre objetos ou componentes do sistema?<br/>
+                <label><input type="radio" name="q_uml_diag" value="A"/> Diagrama de Casos de Uso</label><br/>
+                <label><input type="radio" name="q_uml_diag" value="B"/> Diagrama de Sequência</label><br/>
+                <label><input type="radio" name="q_uml_diag" value="C"/> Diagrama de Classes</label><br/>
+                <label><input type="radio" name="q_uml_diag" value="D"/> Diagrama de Estados</label><br/>
+                <button class="quiz-btn" data-quiz="q_uml_diag" data-answer="B" data-result="res_diag">Verificar</button> <span id="res_diag" class="resultado"></span>
+            </div>
+        </section>
+
+        <!-- Seção Qualidade & Testes (QTS) -->
+        <section id="qualidade">
+            <h2>Qualidade &amp; Testes (QTS)</h2>
+            <p>Esta seção trata de conceitos de Qualidade e Testes de Software (QTS). São abordados os níveis de teste (teste de unidade, integração, sistema e aceitação), diferentes técnicas e abordagens (testes caixa-preta vs caixa-branca, testes de regressão, etc.) e práticas modernas como desenvolvimento orientado a testes (TDD) e automação de testes. Também discutimos a garantia da qualidade de software de forma mais ampla, incluindo gestão de defeitos (bugs), importância de casos de teste bem definidos, uso de integração contínua e revisões de código para melhorar a qualidade. Os exercícios a seguir reforçam esses conceitos, enfatizando por que boas práticas de teste e qualidade são essenciais para se entregar sistemas confiáveis e de alta qualidade.</p>
+            <ol>
+                <li><strong>Exercício 1:</strong> Explique com suas palavras o que é <strong>qualidade de software</strong> e por que é importante no desenvolvimento de sistemas.</li>
+
+                <li><strong>Exercício 2:</strong> Qual a diferença entre <strong>garantia da qualidade de software (QA)</strong> e <strong>teste de software</strong>? Como essas atividades se relacionam durante o desenvolvimento?</li>
+
+                <li><strong>Exercício 3:</strong> Defina o que é um <strong>bug/defeito de software</strong>. O que costuma acontecer quando um testador encontra um bug? (Descreva resumidamente o ciclo de vida de um bug/defeito, do relato à correção).</li>
+
+                <li><strong>Exercício 4:</strong> Explique a diferença entre <strong>teste de unidade</strong>, <strong>teste de integração</strong> e <strong>teste de sistema</strong>. Em que fase do desenvolvimento cada um é normalmente executado?</li>
+
+                <li><strong>Exercício 5:</strong> O que é um <strong>caso de teste</strong>? Quais informações costumam compor a descrição de um caso de teste (por exemplo: condições iniciais, entrada, saída esperada)?</li>
+
+                <li><strong>Exercício 6:</strong> Explique os termos <strong>verificação</strong> e <strong>validação</strong> no contexto de qualidade de software. Qual a distinção entre verificar um produto de trabalho e validar um software?</li>
+
+                <li><strong>Exercício 7:</strong> Qual a diferença entre testes <strong>caixa-preta</strong> e <strong>caixa-branca</strong>? Dê um exemplo de cada abordagem.</li>
+
+                <li><strong>Exercício 8:</strong> O que é <strong>teste de regressão</strong> e por que ele é necessário sempre que uma modificação é feita no software?</li>
+
+                <li><strong>Exercício 9:</strong> Explique o conceito de <strong>Test Driven Development (TDD)</strong>. Como essa prática relaciona testes e codificação durante o desenvolvimento?</li>
+
+                <li><strong>Exercício 10:</strong> Qual a importância de testes de <strong>performance</strong> ou de <strong>carga</strong> em um sistema? Dê um exemplo de métrica que pode ser avaliada nesses testes.</li>
+
+                <li><strong>Exercício 11:</strong> O que são <strong>testes automatizados</strong> e quais as vantagens em relação a testes manuais? Cite uma ferramenta ou framework de automação de testes conhecida.</li>
+
+                <li><strong>Exercício 12:</strong> Como a <strong>integração contínua</strong> pode auxiliar na garantia de qualidade de um projeto de software? Descreva brevemente o que acontece em um processo de integração contínua (CI).</li>
+
+                <li><strong>Exercício 13:</strong> Explique a importância de seguir <strong>padrões de codificação</strong> e realizar <strong>inspeções de código (code review)</strong> como parte do processo de qualidade de software.</li>
+
+                <li><strong>Exercício 14:</strong> Cite e descreva brevemente três características de qualidade de software (por exemplo: confiabilidade, usabilidade, eficiência). Por que elas são importantes?</li>
+
+                <li><strong>Exercício 15:</strong> O que é <strong>teste de aceitação do usuário</strong> (UAT)? Em que etapa do projeto ele ocorre e quem normalmente o realiza?</li>
+
+            </ol>
+            <div class="quiz">
+                <strong>Quiz:</strong> Um cliente está testando o sistema para verificar se ele atende a todos os requisitos antes de aceitá-lo. Que tipo de teste está sendo realizado?<br/>
+                <label><input type="radio" name="q_tipo_teste" value="A"/> Teste de Unidade</label><br/>
+                <label><input type="radio" name="q_tipo_teste" value="B"/> Teste de Integração</label><br/>
+                <label><input type="radio" name="q_tipo_teste" value="C"/> Teste de Aceitação do Usuário</label><br/>
+                <label><input type="radio" name="q_tipo_teste" value="D"/> Teste de Regressão</label><br/>
+                <button class="quiz-btn" data-quiz="q_tipo_teste" data-answer="C" data-result="res_teste">Verificar</button> <span id="res_teste" class="resultado"></span>
+            </div>
+        </section>
+
+        <!-- Seção Sistemas Embarcados (SE) -->
+        <section id="embarcados">
+            <h2>Sistemas Embarcados (SE)</h2>
+            <p>Esta seção aborda os conteúdos de Sistemas Embarcados (SE). São apresentados os conceitos de sistemas computacionais dedicados embutidos em dispositivos, incluindo exemplos comuns do cotidiano. Discutimos as diferenças entre microcontroladores e microprocessadores, além da importância de sistemas de tempo real para aplicações críticas. Também exploramos as linguagens de programação de baixo nível utilizadas no desenvolvimento embarcado (como C/C++ devido à eficiência e controle sobre o hardware) e o uso de sistemas operacionais de tempo real (RTOS) quando necessário. Conceitos como sensores e atuadores são explicados, juntamente com as limitações de recursos (processamento, memória, energia) comuns nesses sistemas e como os desenvolvedores as enfrentam. Além disso, abordamos o que é firmware e a conexão entre sistemas embarcados e Internet das Coisas (IoT). Os exercícios a seguir permitem revisar esses conceitos e incluem um exemplo interativo de controle de um LED (simulado) via software.</p>
+            <ol>
+                <li><strong>Exercício 1:</strong> O que caracteriza um <strong>sistema embarcado</strong>? Dê uma definição e cite dois exemplos de sistemas embarcados que você encontra no dia a dia.</li>
+
+                <li><strong>Exercício 2:</strong> Explique a diferença entre um <strong>microcontrolador</strong> e um <strong>microprocessador</strong>. Onde cada um é normalmente utilizado?</li>
+
+                <li><strong>Exercício 3:</strong> Cite três exemplos de dispositivos ou aplicações que envolvem sistemas embarcados (por exemplo: automóveis, eletrodomésticos inteligentes, dispositivos médicos).</li>
+
+                <li><strong>Exercício 4:</strong> O que é um <strong>sistema em tempo real</strong>? Dê um exemplo de sistema embarcado de tempo real e explique por que a resposta rápida é crítica nesse caso.</li>
+
+                <li><strong>Exercício 5:</strong> Qual linguagem de programação é frequentemente utilizada para desenvolver software de sistemas embarcados e por quê? (Dê um exemplo de linguagens comumente usadas e suas características, ex: C/C++ pela eficiência e controle de baixo nível).</li>
+
+                <li><strong>Exercício 6:</strong> Explique brevemente o papel de um <strong>sistema operacional de tempo real (RTOS)</strong> em sistemas embarcados. Em que situações é necessário usar um RTOS?</li>
+
+                <li><strong>Exercício 7:</strong> O que são <strong>sensores</strong> e <strong>atuadores</strong> em um contexto de sistemas embarcados? Dê um exemplo de cada e como eles interagem com o microcontrolador.</li>
+
+                <li><strong>Exercício 8:</strong> Muitos sistemas embarcados possuem recursos de hardware limitados. Que restrições são comumente encontradas (por exemplo, em termos de processamento, memória, consumo de energia) e como os desenvolvedores lidam com essas limitações?</li>
+
+                <li><strong>Exercício 9:</strong> Explique o que é um <strong>firmware</strong>. Como ele se relaciona com o hardware do dispositivo e como geralmente é gravado/em atualizado em um microcontrolador?</li>
+
+                <li><strong>Exercício 10:</strong> O que é um <strong>Arduino</strong> e por que ele é amplamente utilizado em projetos de sistemas embarcados educacionais e prototipagem?</li>
+
+                <li><strong>Exercício 11:</strong> Explique a diferença entre um <strong>sistema embarcado dedicado</strong> e um computador de uso geral. Por que não faz sentido usar um sistema operacional pesado (como Windows) em um dispositivo embarcado simples?</li>
+
+                <li><strong>Exercício 12:</strong> O que significa <strong>Internet das Coisas (IoT)</strong> e como ela se relaciona com sistemas embarcados? Dê um exemplo de aplicação IoT.</li>
+
+                <li><strong>Exercício 13:</strong> Em sistemas embarcados, o que é uma <strong>interrupção</strong> (interrupt) e qual é a sua utilidade? Dê um exemplo de evento que poderia gerar uma interrupção.</li>
+
+                <li><strong>Exercício 14:</strong> No contexto de comunicação entre dispositivos em um sistema embarcado, cite dois protocolos ou interfaces comuns (por exemplo: UART, I2C, SPI) e a finalidade de cada um.</li>
+
+                <li><strong>Exercício 15:</strong> Abaixo, temos uma representação simplificada de um LED controlado por um microcontrolador. Clique no botão para alternar o estado do LED (ligado/desligado):<br/>
+                    <!-- Indicador de LED e botão para alternância do LED -->
+                    <div id="led" class="led"></div> <button id="btnLed">Alternar LED</button></li>
+
+            </ol>
+        </section>
+    </main>
+    <!-- Rodapé -->
+    <footer>
+        <p>Portal Educacional - Desenvolvimento de Sistemas &copy; 2025</p>
+        <p><a href="#top">Voltar ao topo</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
