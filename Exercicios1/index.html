@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisão Intensiva - Desenvolvimento de Sistemas</title>
+    <!-- Meta tags for responsividade e descrição -->
+    <meta name="description" content="Site de revisão intensiva de fim de semana para o curso Técnico em Desenvolvimento de Sistemas. Abrange Banco de Dados, Programação, Web, Infraestrutura, Análise, Testes e Sistemas Embarcados com conteúdo interativo.">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navegação principal -->
+    <header>
+        <nav id="main-nav">
+            <h1>Revisão DS</h1>
+            <button id="menu-toggle" aria-label="Abrir/fechar menu">&#9776;</button>
+            <ul id="nav-links">
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#cronograma">Cronograma</a>
+                </li>
+                <li>
+                    <a href="#bd">Banco de Dados</a>
+                </li>
+                <li>
+                    <a href="#prog">Programação</a>
+                </li>
+                <li>
+                    <a href="#web">Desenvolvimento Web</a>
+                </li>
+                <li>
+                    <a href="#infra">Infraestrutura</a>
+                </li>
+                <li>
+                    <a href="#analise">Análise &amp; Projeto</a>
+                </li>
+                <li>
+                    <a href="#qualidade">Qualidade &amp; Testes</a>
+                </li>
+                <li>
+                    <a href="#embarcados">Sistemas Embarcados</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Seção Início / Apresentação -->
+    <section id="inicio">
+        <h2>Bem-vindo à Revisão Intensiva</h2>
+        <p>Este site é parte de uma revisão intensiva de fim de semana para o curso Técnico em <strong>Desenvolvimento de Sistemas</strong>. 
+        Aqui você encontrará um resumo abrangente e interativo dos principais tópicos abordados durante o curso, incluindo explicações aprofundadas e exercícios práticos.</p>
+        <p>O objetivo é reforçar seus conhecimentos em <em>Banco de Dados</em>, <em>Programação</em>, <em>Desenvolvimento Web</em>, <em>Infraestrutura</em>, <em>Análise e Projeto de Sistemas</em>, <em>Qualidade e Testes de Software</em> e <em>Sistemas Embarcados</em>. 
+        Navegue pelas seções abaixo para revisar cada conteúdo. 
+        Aproveite os quizzes, flashcards e áreas interativas de código para praticar. Boa revisão!</p>
+    </section>
+
+    <!-- Seção Banco de Dados I & II -->
+    <section id="bd">
+        <h2>Banco de Dados I &amp; II</h2>
+        <p><strong>Modelagem ER (Entidade-Relacionamento):</strong> É a base para projetar bancos de dados relacionais. 
+        Envolve identificar <em>entidades</em> (ex: Aluno, Curso), seus <em>atributos</em> (ex: nome, data de nascimento do Aluno) e os <em>relacionamentos</em> entre elas (ex: Aluno <strong>matriculado</strong> em Curso). 
+        Os diagramas ER representam graficamente essas entidades e relacionamentos, auxiliando na visualização da estrutura do banco antes da implementação.</p>
+        <p><strong>SQL (Structured Query Language):</strong> É a linguagem padrão para interação com bancos de dados relacionais. Alguns comandos importantes incluem:
+            <ul>
+                <li><code>SELECT</code>: usado para consultar e selecionar dados. Ex: <code>SELECT * FROM Alunos;</code> retorna todos os registros da tabela Alunos.</li>
+                <li><code>JOIN</code>: usado para combinar resultados de duas ou mais tabelas baseado em um campo comum. Ex: <code>SELECT Alunos.nome, Cursos.nome FROM Alunos JOIN Cursos ON Alunos.curso_id = Cursos.id;</code> junta dados de Alunos com Cursos.</li>
+                <li><strong>DML (Data Manipulation Language):</strong> inclui comandos para modificação de dados, como <code>INSERT</code> (inserir novos registros), <code>UPDATE</code> (atualizar registros existentes) e <code>DELETE</code> (remover registros).</li>
+            </ul>
+        </p>
+        <p><strong>Normalização:</strong> Processo de organização das tabelas para reduzir redundâncias e assegurar integridade dos dados. 
+        Aplica-se uma série de <em>formas normais</em> (1ª, 2ª, 3ª FN, etc.) com regras como eliminar grupos repetitivos, criar chaves primárias e chaves estrangeiras adequadas, separar dados em tabelas relacionadas, entre outras medidas. 
+        A normalização ajuda a evitar anomalias de inserção, atualização e exclusão, garantindo um design de banco de dados mais sólido.</p>
+        <!-- Exemplo interativo de consulta SQL -->
+        <div class="interactive">
+            <h3>Teste Rápido de SQL</h3>
+            <p>Experimente digitar uma consulta SQL simples na caixa abaixo para ver os resultados simulados. (Tente, por exemplo: <code>SELECT * FROM Alunos</code>)</p>
+            <textarea id="sql-input" rows="3" placeholder="Escreva uma consulta SQL..."></textarea>
+            <button onclick="executarConsulta()">Executar Consulta</button>
+            <div id="sql-output" class="output"></div>
+        </div>
+        <!-- Quiz de Banco de Dados -->
+        <div class="quiz">
+            <h3>Quiz Rápido de Banco de Dados</h3>
+            <p>Pergunta: Qual comando SQL é utilizado para atualizar dados já existentes em uma tabela?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-sql" value="SELECT"> SELECT</label></li>
+                <li><label><input type="radio" name="q-sql" value="UPDATE"> UPDATE</label></li>
+                <li><label><input type="radio" name="q-sql" value="DELETE"> DELETE</label></li>
+                <li><label><input type="radio" name="q-sql" value="CREATE"> CREATE</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-sql', 'UPDATE')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-sql" class="feedback"></div>
+        </div>
+        <div class="quiz">
+            <h3>Quiz Extra de Banco de Dados</h3>
+            <p>Pergunta: Qual comando SQL é utilizado para inserir um novo registro em uma tabela?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-sql2" value="SELECT"> SELECT</label></li>
+                <li><label><input type="radio" name="q-sql2" value="INSERT"> INSERT</label></li>
+                <li><label><input type="radio" name="q-sql2" value="UPDATE"> UPDATE</label></li>
+                <li><label><input type="radio" name="q-sql2" value="DROP"> DROP</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-sql2', 'INSERT')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-sql2" class="feedback"></div>
+        </div>
+        <div class="flashcards">
+            <h3>Flashcards de Banco de Dados</h3>
+            <div class="flashcard">
+                <div class="front">SQL</div>
+                <div class="back">Linguagem utilizada para gerenciar e consultar bancos de dados relacionais.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Chave Primária</div>
+                <div class="back">Um atributo (ou conjunto de atributos) que identifica unicamente cada registro em uma tabela.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">JOIN</div>
+                <div class="back">Operação em SQL que combina linhas de duas ou mais tabelas com base em um campo comum entre elas.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Programação (Algoritmos, POO, Estruturas de Dados) -->
+    <section id="prog">
+        <h2>Programação (Algoritmos, POO, Estruturas de Dados)</h2>
+        <p><strong>Algoritmos:</strong> São sequências de passos lógicos e bem definidos para resolver um problema. 
+        Em programação, aprendemos a representar algoritmos usando pseudocódigo ou fluxogramas antes de escrevê-los em uma linguagem específica. 
+        Conceitos como condições (<code>if/else</code>), loops (<code>for</code>, <code>while</code>) e funções ajudam a estruturar soluções algorítmicas. 
+        Também é importante considerar a eficiência (complexidade de tempo e espaço) de um algoritmo ao lidar com grandes volumes de dados.</p>
+        <p><strong>POO (Programação Orientada a Objetos):</strong> Paradigma de programação que utiliza "objetos" – instâncias de <em>classes</em> – para organizar o código. 
+        Os quatro pilares da POO incluem:
+            <ul>
+                <li><strong>Encapsulamento:</strong> organizar dados e métodos dentro de classes, escondendo detalhes internos e expondo apenas o necessário.</li>
+                <li><strong>Herança:</strong> criar novas classes a partir de classes existentes, reutilizando código e comportamento já definido.</li>
+                <li><strong>Polimorfismo:</strong> objetos de classes diferentes podem ser tratados de forma uniforme se compartilham o mesmo ancestral, permitindo que métodos assumam diferentes comportamentos.</li>
+                <li><strong>Abstração:</strong> reduzir a complexidade mostrando apenas os detalhes essenciais de um objeto.</li>
+            </ul>
+        </p>
+        <p><em>Exemplo de implementação de classes (Java):</em></p>
+        <pre><code class="language-java">
+// Exemplo de classe em Java
+class Animal {
+    String nome;
+    public Animal(String nome) {
+        this.nome = nome;
+    }
+    public void emitirSom() {
+        System.out.println("Som gen\u00e9rico");
+    }
+}
+
+class Cachorro extends Animal {
+    public Cachorro(String nome) {
+        super(nome);
+    }
+    @Override
+    public void emitirSom() {
+        System.out.println("Latido");
+    }
+}
+
+// Uso
+Animal a = new Cachorro("Rex");
+a.emitirSom(); // Sa\u00edda: "Latido"
+</code></pre>
+        <p><strong>Estruturas de Dados:</strong> Forma de organizar e armazenar os dados para que possam ser acessados e modificados de forma eficiente. Exemplos incluem:
+            <ul>
+                <li><strong>Arrays/Listas:</strong> coleções sequenciais de elementos indexados.</li>
+                <li><strong>Pilhas (Stack):</strong> coleção LIFO (Last In, First Out), onde o último elemento inserido é o primeiro a sair.</li>
+                <li><strong>Filas (Queue):</strong> coleção FIFO (First In, First Out), onde o primeiro elemento inserido é o primeiro a sair.</li>
+                <li><strong>Listas Ligadas:</strong> elementos (nós) ligados uns aos outros por ponteiros/referências, formando uma sequência.</li>
+                <li><strong>Árvores e Grafos:</strong> estruturas hierárquicas (como árvores binárias) ou redes de conectividade (grafos) para representar relações complexas.</li>
+            </ul>
+        </p>
+        <!-- Exemplo interativo: Algoritmo de Fatorial em JavaScript -->
+        <div class="interactive">
+            <h3>Teste de Algoritmo - Cálculo Fatorial</h3>
+            <p>Insira um número inteiro para calcular seu fatorial (n!).</p>
+            <input type="number" id="fact-input" placeholder="Digite um número" />
+            <button onclick="calcularFatorial()">Calcular Fatorial</button>
+            <div id="fact-output" class="output"></div>
+        </div>
+        <!-- Quiz de Programação -->
+        <div class="quiz">
+            <h3>Quiz Rápido de Programação</h3>
+            <p>Pergunta: Qual estrutura de dados utiliza o princípio FIFO (First In, First Out)?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-prog" value="Stack"> Pilha (Stack)</label></li>
+                <li><label><input type="radio" name="q-prog" value="Queue"> Fila (Queue)</label></li>
+                <li><label><input type="radio" name="q-prog" value="LinkedList"> Lista Ligada</label></li>
+                <li><label><input type="radio" name="q-prog" value="BinaryTree">Árvore Binária</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-prog', 'Queue')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-prog" class="feedback"></div>
+        </div>
+        <div class="quiz">
+            <h3>Quiz Extra de Programação</h3>
+            <p>Pergunta: Qual dos itens abaixo <em>NÃO</em> é um dos quatro pilares da POO?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-prog2" value="Encapsulamento"> Encapsulamento</label></li>
+                <li><label><input type="radio" name="q-prog2" value="Herança"> Herança</label></li>
+                <li><label><input type="radio" name="q-prog2" value="Polimorfismo"> Polimorfismo</label></li>
+                <li><label><input type="radio" name="q-prog2" value="Compilacao"> Compilação</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-prog2', 'Compilacao')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-prog2" class="feedback"></div>
+        </div>
+        <div class="flashcards">
+            <h3>Flashcards de Programação</h3>
+            <div class="flashcard">
+                <div class="front">Algoritmo</div>
+                <div class="back">Sequência de passos lógicos definida para realizar uma tarefa ou resolver um problema.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">POO</div>
+                <div class="back">Programação Orientada a Objetos; paradigma que organiza o código em classes e objetos, enfatizando encapsulamento, herança, polimorfismo e abstração.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Estrutura de Dados</div>
+                <div class="back">Forma de organizar e armazenar dados, por exemplo: arrays, listas, pilhas, filas, árvores, entre outras.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Desenvolvimento Web (PW I–III) -->
+    <section id="web">
+        <h2>Desenvolvimento Web (PW I, II, III)</h2>
+        <p><strong>HTML (HyperText Markup Language):</strong> Linguagem de marcação usada para estruturar o conteúdo de páginas web. 
+        Utiliza <em>tags</em> (marcas) representadas por &lt;&gt; para definir elementos como parágrafos (<code>&lt;p&gt;</code>), cabeçalhos (<code>&lt;h1&gt;...&lt;h6&gt;</code>), links (<code>&lt;a&gt;</code>), imagens (<code>&lt;img&gt;</code>), formulários (<code>&lt;form&gt;</code>), entre outros. 
+        Um documento HTML bem estruturado inclui o &lt;!DOCTYPE html&gt;, a seção <code>&lt;head&gt;</code> com metadados, e o <code>&lt;body&gt;</code> com o conteúdo visível.</p>
+        <p><strong>CSS (Cascading Style Sheets):</strong> Linguagem de estilo utilizada para definir a aparência visual do HTML. 
+        Permite alterar cores, fontes, espaçamentos, layout e responsividade da página. 
+        Os estilos podem ser definidos em linha, internamente ou em arquivos externos (como estamos fazendo neste site via <code>style.css</code>). 
+        Conceitos importantes incluem seletores (ex: <code>.classe</code>, <code>#id</code>, <code>tag</code>), propriedades (ex: <code>color</code>, <code>font-size</code>, <code>margin</code>) e box model (margem, borda, padding, conteúdo).</p>
+        <p><strong>JavaScript:</strong> Linguagem de programação interpretada pelo navegador que torna as páginas web dinâmicas e interativas. 
+        Com JavaScript podemos manipular o DOM (estrutura de objetos do documento HTML) para alterar conteúdo e estilos em tempo real, validar formulários, criar animações e muito mais. 
+        Também é possível usar JavaScript no backend com plataformas como Node.js, mas aqui focamos no uso client-side.</p>
+        <p><strong>PHP:</strong> Linguagem de script executada no servidor, muito utilizada para desenvolvimento web backend. 
+        Um código PHP é executado no servidor (por exemplo, em um servidor Apache com PHP instalado) e pode interagir com bancos de dados, arquivos e outros serviços, gerando dinamicamente HTML que é enviado ao navegador do usuário. 
+        Ao longo do curso você deve ter aprendido a criar aplicações web básicas em PHP, manipulando formulários e exibindo resultados de consultas em um navegador.</p>
+        <!-- Interatividade: Alterar estilo via JavaScript -->
+        <div class="interactive">
+            <h3>Experimente CSS Dinâmico</h3>
+            <p>Clique no botão abaixo para mudar a cor deste texto utilizando JavaScript e CSS:</p>
+            <p id="demo-text">Este texto vai mudar de cor!</p>
+            <button onclick="mudarCor()">Mudar Cor</button>
+        </div>
+        <!-- Quiz de Desenvolvimento Web -->
+        <div class="quiz">
+            <h3>Quiz Rápido de Web</h3>
+            <p>Pergunta: Qual das opções abaixo é uma linguagem de estilização utilizada na Web?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-web" value="HTML"> HTML</label></li>
+                <li><label><input type="radio" name="q-web" value="CSS"> CSS</label></li>
+                <li><label><input type="radio" name="q-web" value="SQL"> SQL</label></li>
+                <li><label><input type="radio" name="q-web" value="C++"> C++</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-web', 'CSS')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-web" class="feedback"></div>
+        </div>
+        <div class="quiz">
+            <h3>Quiz Extra de Web</h3>
+            <p>Pergunta: Qual dessas linguagens é executada no lado do servidor (server-side)?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-web2" value="HTML"> HTML</label></li>
+                <li><label><input type="radio" name="q-web2" value="CSS"> CSS</label></li>
+                <li><label><input type="radio" name="q-web2" value="JavaScript"> JavaScript</label></li>
+                <li><label><input type="radio" name="q-web2" value="PHP"> PHP</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-web2', 'PHP')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-web2" class="feedback"></div>
+        </div>
+        <div class="flashcards">
+            <h3>Flashcards de Desenvolvimento Web</h3>
+            <div class="flashcard">
+                <div class="front">HTML</div>
+                <div class="back">Linguagem de marcação usada para estruturar conteúdo de páginas web.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">CSS</div>
+                <div class="back">Linguagem de folha de estilo usada para definir a aparência (cores, layout, fontes) das páginas web.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">JavaScript</div>
+                <div class="back">Linguagem de programação executada no navegador para tornar páginas web interativas e dinâmicas.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Fundamentos e Infraestrutura (Hardware, Redes, Segurança) -->
+    <section id="infra">
+        <h2>Fundamentos e Infraestrutura (FI, IPSSI)</h2>
+        <p><strong>Hardware vs. Software:</strong> Hardware refere-se aos componentes físicos do computador (equipamentos, dispositivos eletrônicos, cabos, etc.), enquanto Software são os programas e instruções executados pelo hardware. 
+        Em termos de computação, o hardware é a base que executa o software. Exemplos: o processador, memória RAM e disco rígido são hardware; o sistema operacional, editores de texto e aplicativos são software.</p>
+        <p><strong>Redes e Protocolos:</strong> Uma rede de computadores permite a comunicação entre dispositivos. 
+        Protocolos são conjuntos de regras que definem como essa comunicação ocorre. 
+        Por exemplo, o protocolo <strong>TCP/IP</strong> é a base da Internet, definindo como os dados são divididos em pacotes, endereçados, transmitidos e recebidos. 
+        Já o <strong>HTTP</strong> é um protocolo de aplicação utilizado para transferência de hipermídia (páginas web). 
+        Conceitos importantes em redes incluem topologias (a forma como os dispositivos se conectam), endereçamento IP, portas e protocolos de segurança como TLS/SSL para criptografia de dados.</p>
+        <p><strong>Segurança da Informação:</strong> Envolve proteger os dados e sistemas contra acessos não autorizados e outras ameaças. 
+        Alguns princípios fundamentais são: <em>Confidencialidade</em> (garantir que apenas pessoas autorizadas tenham acesso à informação), <em>Integridade</em> (manter os dados corretos e íntegros, sem alterações não autorizadas) e <em>Disponibilidade</em> (assegurar que os sistemas e dados estejam disponíveis quando necessários). 
+        A segurança abrange técnicas como criptografia, uso de firewalls, sistemas de detecção de intrusão, políticas de backup e controle de acesso.</p>
+        <!-- Quiz de Infraestrutura -->
+        <div class="quiz">
+            <h3>Quiz Rápido de Infraestrutura</h3>
+            <p>Pergunta: Qual dos itens abaixo <em>não</em> é um protocolo de comunicação em redes de computadores?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-infra" value="HTTP"> HTTP</label></li>
+                <li><label><input type="radio" name="q-infra" value="TCP/IP"> TCP/IP</label></li>
+                <li><label><input type="radio" name="q-infra" value="UDP"> UDP</label></li>
+                <li><label><input type="radio" name="q-infra" value="JSON"> JSON</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-infra', 'JSON')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-infra" class="feedback"></div>
+        </div>
+        <div class="quiz">
+            <h3>Quiz Extra de Infraestrutura</h3>
+            <p>Pergunta: Qual princípio da segurança da informação garante que apenas pessoas autorizadas tenham acesso aos dados?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-infra2" value="Integridade"> Integridade</label></li>
+                <li><label><input type="radio" name="q-infra2" value="Disponibilidade"> Disponibilidade</label></li>
+                <li><label><input type="radio" name="q-infra2" value="Autenticacao"> Autenticação</label></li>
+                <li><label><input type="radio" name="q-infra2" value="Confidencialidade"> Confidencialidade</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-infra2', 'Confidencialidade')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-infra2" class="feedback"></div>
+        </div>
+        <!-- Flashcards de Segurança (exemplo) -->
+        <div class="flashcards">
+            <h3>Flashcards de Segurança</h3>
+            <div class="flashcard">
+                <div class="front">O que é SSL?</div>
+                <div class="back">Uma tecnologia de segurança para criar um link criptografado entre um servidor web e um navegador.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Porta 80</div>
+                <div class="back">Porta padrão utilizada pelo protocolo HTTP.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Firewall</div>
+                <div class="back">Dispositivo ou software de segurança que controla o tráfego de rede, permitindo ou bloqueando pacotes com base em regras de segurança definidas.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Análise & Projeto de Sistemas -->
+    <section id="analise">
+        <h2>Análise &amp; Projeto (A&amp;P, DDS)</h2>
+        <p><strong>UML (Unified Modeling Language):</strong> É uma linguagem de modelagem amplamente utilizada para especificar, visualizar e documentar artefatos de sistemas de software. 
+        Oferece diversos tipos de diagramas, tais como:
+            <ul>
+                <li><strong>Diagrama de Casos de Uso:</strong> representa as funções ou objetivos do sistema do ponto de vista do usuário (atores e casos de uso).</li>
+                <li><strong>Diagrama de Classes:</strong> mostra as classes do sistema, seus atributos, métodos e relações (associações, heranças, etc.).</li>
+                <li><strong>Diagrama de Sequência:</strong> ilustra interações entre objetos ao longo do tempo, especificando a ordem das mensagens trocadas entre eles.</li>
+                <li><strong>Diagrama de Atividades:</strong> representa fluxos de atividades e decisões (fluxogramas do processo).</li>
+            </ul>
+        </p>
+        <p>Os diagramas UML auxiliam na comunicação entre desenvolvedores e partes interessadas, e são fundamentais nas etapas de análise e projeto de sistemas, permitindo visualizar a estrutura e o comportamento antes da codificação.</p>
+        <p><strong>Metodologias Ágeis (Scrum):</strong> Em contraste com metodologias tradicionais (como o cascata), as metodologias ágeis promovem entregas iterativas e incrementais de software, adaptação constante a mudanças e colaboração intensa com o cliente. 
+        <em>Scrum</em> é uma das metodologias ágeis mais populares, que divide o desenvolvimento em ciclos curtos chamados <strong>Sprints</strong> (geralmente de 2-4 semanas). 
+        No Scrum, existem papéis definidos como <strong>Product Owner</strong> (representa o cliente e define prioridades), <strong>Scrum Master</strong> (facilita o processo e remove impedimentos) e o <strong>Time de Desenvolvimento</strong> (implementa o produto). 
+        A cada sprint, ocorrem reuniões como a <em>Daily Scrum</em> (breve reunião diária para sincronizar o time), <em>Revisão da Sprint</em> (apresentar o que foi desenvolvido) e <em>Retrospectiva</em> (discutir melhorias no processo).</p>
+        <!-- Quiz de Análise & Projeto -->
+        <div class="quiz">
+            <h3>Quiz Rápido de Análise &amp; Projeto</h3>
+            <p>Pergunta: Qual diagrama UML é mais adequado para representar a interação temporal entre objetos?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-analise" value="Caso de Uso"> Diagrama de Casos de Uso</label></li>
+                <li><label><input type="radio" name="q-analise" value="Classe"> Diagrama de Classes</label></li>
+                <li><label><input type="radio" name="q-analise" value="Sequencia"> Diagrama de Sequência</label></li>
+                <li><label><input type="radio" name="q-analise" value="Atividade"> Diagrama de Atividades</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-analise', 'Sequencia')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-analise" class="feedback"></div>
+        </div>
+        <div class="quiz">
+            <h3>Quiz Extra de Análise &amp; Projeto</h3>
+            <p>Pergunta: Qual dos seguintes é um exemplo de metodologia <em>ágil</em> de desenvolvimento de software?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-analise2" value="Scrum"> Scrum</label></li>
+                <li><label><input type="radio" name="q-analise2" value="Cascata"> Cascata</label></li>
+                <li><label><input type="radio" name="q-analise2" value="ModeloV"> Modelo em V</label></li>
+                <li><label><input type="radio" name="q-analise2" value="Espiral"> Espiral</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-analise2', 'Scrum')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-analise2" class="feedback"></div>
+        </div>
+        <div class="flashcards">
+            <h3>Flashcards de Análise &amp; Projeto</h3>
+            <div class="flashcard">
+                <div class="front">UML</div>
+                <div class="back">Linguagem de modelagem unificada; permite criar diversos diagramas para planejar e visualizar sistemas de software.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Diagrama de Classes</div>
+                <div class="back">Tipo de diagrama UML que representa classes, seus atributos, métodos e relações (associações, heranças).</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Scrum</div>
+                <div class="back">Uma metodologia ágil de desenvolvimento que divide o trabalho em sprints, com papéis definidos (Product Owner, Scrum Master, Time de Desenvolvimento) e reuniões frequentes.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Qualidade & Testes de Software -->
+    <section id="qualidade">
+        <h2>Qualidade &amp; Testes de Software (QTS)</h2>
+        <p><strong>Testes Unitários:</strong> São testes escritos pelos desenvolvedores para verificar o funcionamento de unidades individuais do código (geralmente funções ou métodos). 
+        Cada teste cobre um pequeno comportamento esperado, garantindo que aquela parte do sistema funcione conforme o esperado isoladamente. 
+        Testes unitários ajudam a identificar problemas cedo no desenvolvimento e servem como documentação viva do comportamento do código.</p>
+        <p><strong>Testes de Integração:</strong> Verificam se módulos ou serviços distintos funcionam corretamente em conjunto. 
+        Após testar unidades isoladamente, é importante garantir que a comunicação e interação entre elas não introduza falhas. 
+        Por exemplo, um teste de integração pode validar se o módulo de login interage corretamente com o banco de dados e com o módulo de interface do usuário.</p>
+        <p><strong>TDD (Test-Driven Development):</strong> É uma prática de desenvolvimento onde os testes são escritos antes do código de produção. 
+        O fluxo clássico do TDD é: escrever um teste unitário para uma funcionalidade (que inicialmente falha, indicando que a funcionalidade ainda não existe ou está incompleta), então escrever o mínimo de código para fazer o teste passar, e então refatorar o código para melhorar a qualidade mantendo os testes passando. 
+        O TDD promove código bem projetado e alta cobertura de testes.</p>
+        <p><em>Exemplo de teste de unidade (JavaScript):</em></p>
+        <pre><code class="language-js">
+// Exemplo de testes unit\u00e1rios simples em JavaScript
+function soma(a, b) {
+    return a + b;
+}
+
+// Testes
+console.assert(soma(2, 3) === 5, "Erro: 2+3 != 5");
+console.assert(soma(0, 0) === 0, "Erro: 0+0 != 0");
+console.log("Testes finalizados");
+</code></pre>
+        <!-- Quiz de Qualidade & Testes -->
+        <div class="quiz">
+            <h3>Quiz Rápido de Testes de Software</h3>
+            <p>Pergunta: Em qual etapa do TDD você escreve o código de produção após um teste falhar?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-testes" value="Red"> Etapa Red (Vermelha)</label></li>
+                <li><label><input type="radio" name="q-testes" value="Green"> Etapa Green (Verde)</label></li>
+                <li><label><input type="radio" name="q-testes" value="Blue"> Etapa Azul</label></li>
+                <li><label><input type="radio" name="q-testes" value="Refactor"> Etapa de Refatoração</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-testes', 'Green')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-testes" class="feedback"></div>
+        </div>
+        <div class="quiz">
+            <h3>Quiz Extra de Testes de Software</h3>
+            <p>Pergunta: Qual tipo de teste verifica a interação entre módulos ou componentes?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-testes2" value="Unitario"> Teste Unitário</label></li>
+                <li><label><input type="radio" name="q-testes2" value="Integracao"> Teste de Integração</label></li>
+                <li><label><input type="radio" name="q-testes2" value="Sistema"> Teste de Sistema</label></li>
+                <li><label><input type="radio" name="q-testes2" value="Regressao"> Teste de Regressão</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-testes2', 'Integracao')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-testes2" class="feedback"></div>
+        </div>
+        <div class="flashcards">
+            <h3>Flashcards de Qualidade &amp; Testes</h3>
+            <div class="flashcard">
+                <div class="front">Teste Unitário</div>
+                <div class="back">Teste que cobre uma unidade individual do código (como uma função), garantindo que ela se comporte conforme o esperado isoladamente.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Teste de Integração</div>
+                <div class="back">Teste que verifica se diferentes módulos ou componentes funcionam corretamente quando combinados.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">TDD</div>
+                <div class="back">Test-Driven Development; prática em que os testes são escritos antes do código, guiando o desenvolvimento das funcionalidades.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Sistemas Embarcados -->
+    <section id="embarcados">
+        <h2>Sistemas Embarcados (SE)</h2>
+        <p><strong>Microcontroladores:</strong> São circuitos integrados que contêm um microprocessador, memória e periféricos de entrada/saída em um só chip. 
+        Diferentemente de um computador de propósito geral, um microcontrolador é projetado para executar tarefas específicas e está presente em inúmeras aplicações do dia a dia, como eletrodomésticos, automóveis, dispositivos IoT, etc. 
+        Exemplos de microcontroladores populares incluem a família AVR (usada no Arduino), PIC, ARM Cortex-M (usados em vários dispositivos embarcados) entre outros. 
+        Programá-los normalmente envolve uso de linguagens como C/C++ ou até Assembly, dependendo do nível de controle necessário.</p>
+        <p><strong>Sistemas Operacionais de Tempo Real (RTOS):</strong> São sistemas operacionais projetados para aplicações que requerem alta previsibilidade e confiabilidade no tempo de resposta. 
+        Diferentemente de sistemas operacionais tradicionais (como Windows ou Linux de uso geral), um RTOS prioriza o cumprimento de prazos estritos para tarefas críticas. 
+        Em um RTOS, tarefas (threads) são agendadas de forma determinística. Isso é importante em cenários como controle de equipamentos industriais, aeroespacial, dispositivos médicos ou qualquer sistema embarcado onde atrasos podem causar falhas graves. 
+        Exemplos de RTOS incluem FreeRTOS, VxWorks, e Zephyr OS.</p>
+        <!-- Quiz de Sistemas Embarcados -->
+        <div class="quiz">
+            <h3>Quiz Rápido de Sistemas Embarcados</h3>
+            <p>Pergunta: Qual das opções abaixo melhor descreve um microcontrolador?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-emb" value="PC"> Um computador personal de alto desempenho</label></li>
+                <li><label><input type="radio" name="q-emb" value="Chip"> Um único chip contendo CPU, memória e interfaces de I/O</label></li>
+                <li><label><input type="radio" name="q-emb" value="SO"> Um software para controlar hardware externo</label></li>
+                <li><label><input type="radio" name="q-emb" value="App"> Um aplicativo móvel para dispositivos IoT</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-emb', 'Chip')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-emb" class="feedback"></div>
+        </div>
+        <div class="quiz">
+            <h3>Quiz Extra de Sistemas Embarcados</h3>
+            <p>Pergunta: Qual dos seguintes é um sistema operacional de <em>tempo real</em> (RTOS)?</p>
+            <ul class="quiz-options">
+                <li><label><input type="radio" name="q-emb2" value="FreeRTOS"> FreeRTOS</label></li>
+                <li><label><input type="radio" name="q-emb2" value="Windows"> Windows</label></li>
+                <li><label><input type="radio" name="q-emb2" value="Linux"> Linux</label></li>
+                <li><label><input type="radio" name="q-emb2" value="Android"> Android</label></li>
+            </ul>
+            <button onclick="verificarQuiz('q-emb2', 'FreeRTOS')">Verificar Resposta</button>
+            <div id="quiz-feedback-q-emb2" class="feedback"></div>
+        </div>
+        <div class="flashcards">
+            <h3>Flashcards de Sistemas Embarcados</h3>
+            <div class="flashcard">
+                <div class="front">Sistema Embarcado</div>
+                <div class="back">Um sistema de computação integrado a dispositivos que não são computadores de propósito geral, projetado para realizar uma função dedicada.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">Microcontrolador</div>
+                <div class="back">Um microcomputador em um chip único, contendo CPU, memória e periféricos; utilizado para controlar dispositivos eletrônicos.</div>
+            </div>
+            <div class="flashcard">
+                <div class="front">RTOS</div>
+                <div class="back">Real-Time Operating System; sistema operacional projetado para garantir respostas em tempo hábil a eventos, respeitando prazos estritos em aplicações críticas.</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Revisão Intensiva - Desenvolvimento de Sistemas &copy; 2025</p>
+        <p><small>Este material de revisão abrange conteúdos selecionados do curso, excluindo TCC, para apoio aos alunos. Bons estudos!</small></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
