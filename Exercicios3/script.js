@@ -26,7 +26,43 @@ const subjects = {
         ],
         correct: 1,  // "SELECT" é a resposta correta
         textAfter: "O comando SELECT é utilizado para consultar e retornar dados de um banco de dados."
-      }
+      },
+      {
+        textBefore: "Sistemas de gerenciamento de banco de dados são usados para armazenar e manipular dados de maneira estruturada.",
+        question: "Qual dos itens a seguir é um exemplo de SGBD?",
+        options: [
+          "MySQL",
+          "HTML",
+          "JavaScript",
+          "Photoshop"
+        ],
+        correct: 0,
+        textAfter: "MySQL é um sistema de gerenciamento de banco de dados amplamente utilizado."
+      },
+      {
+        textBefore: "Em um modelo relacional, relacionamentos muitos-para-muitos exigem uma estrutura adicional.",
+        question: "Como é representado um relacionamento N para N?",
+        options: [
+          "Por meio de uma tabela de associação",
+          "Com um campo booleano",
+          "Apenas com uma chave primária composta",
+          "Através de uma visão (view)"
+        ],
+        correct: 0,
+        textAfter: "Uma tabela intermediária armazena as associações entre as duas tabelas principais."
+      },
+      {
+        textBefore: "Há comandos SQL específicos para manipular estruturas do banco.",
+        question: "Qual comando remove uma tabela inteira do banco de dados?",
+        options: [
+          "DROP TABLE",
+          "DELETE",
+          "TRUNCATE",
+          "REMOVE"
+        ],
+        correct: 0,
+        textAfter: "DROP TABLE exclui a definição e os dados da tabela permanentemente."
+      },
       // ... (até 40 questões no total para Banco de Dados, seguindo este formato)
     ]
   },
@@ -46,7 +82,55 @@ const subjects = {
         ],
         correct: 1,
         textAfter: "Algoritmo é uma sequência passo a passo de instruções para realizar uma tarefa ou resolver um problema."
-      }
+      },
+      {
+        textBefore: "Estruturas de controle permitem repetição de blocos de código.",
+        question: "Qual estrutura executa um bloco enquanto a condição for verdadeira?",
+        options: [
+          "if",
+          "for",
+          "while",
+          "switch"
+        ],
+        correct: 2,
+        textAfter: "O laço while repete as instruções enquanto a condição permanecer verdadeira."
+      },
+      {
+        textBefore: "Na programação orientada a objetos, classes podem compartilhar comportamentos.",
+        question: "Qual conceito permite que uma classe herde características de outra?",
+        options: [
+          "Encapsulamento",
+          "Herança",
+          "Polimorfismo",
+          "Recursão"
+        ],
+        correct: 1,
+        textAfter: "Herança permite reutilizar atributos e métodos de uma classe base em outra classe."
+      },
+      {
+        textBefore: "Alguns tipos de dados são usados para valores lógicos.",
+        question: "Qual tipo representa verdadeiro ou falso?",
+        options: [
+          "int",
+          "boolean",
+          "string",
+          "float"
+        ],
+        correct: 1,
+        textAfter: "O tipo boolean armazena valores de lógica binária: verdadeiro ou falso."
+      },
+      {
+        textBefore: "Antes da execução, muitas linguagens traduzem o código fonte para outra forma.",
+        question: "O que acontece durante a compilação de um programa?",
+        options: [
+          "O código é traduzido para linguagem de máquina",
+          "O programa roda linha a linha",
+          "Os comentários são removidos",
+          "Apenas verifica-se a sintaxe"
+        ],
+        correct: 0,
+        textAfter: "Compilar gera um arquivo executável ou bytecode que pode ser interpretado pela máquina."
+      },
       // ... (demais questões de Programação)
     ]
   },
@@ -64,7 +148,55 @@ const subjects = {
         ],
         correct: 2,
         textAfter: "JavaScript é uma linguagem de programação, enquanto HTML é linguagem de marcação e CSS de estilo."
-      }
+      },
+      {
+        textBefore: "Em CSS é possível definir cores de fundo de elementos.",
+        question: "Qual propriedade altera a cor de fundo?",
+        options: [
+          "color",
+          "background-color",
+          "font-color",
+          "border-color"
+        ],
+        correct: 1,
+        textAfter: "A propriedade background-color define a cor de fundo de um elemento."
+      },
+      {
+        textBefore: "O HTML é a base estrutural de páginas na web.",
+        question: "O que significa a sigla HTML?",
+        options: [
+          "Hypertext Makeup Language",
+          "Hyperlinks and Text Markup Language",
+          "Hyper Text Markup Language",
+          "Home Tool Markup Language"
+        ],
+        correct: 2,
+        textAfter: "HTML significa Hyper Text Markup Language."
+      },
+      {
+        textBefore: "Links permitem a navegação entre páginas e recursos.",
+        question: "Qual tag HTML cria um hyperlink?",
+        options: [
+          "<img>",
+          "<a>",
+          "<link>",
+          "<div>"
+        ],
+        correct: 1,
+        textAfter: "A tag <a> define um âncora, utilizada para hyperlinks."
+      },
+      {
+        textBefore: "Arrays em JavaScript possuem métodos úteis para manipulação.",
+        question: "Qual método adiciona um elemento ao final de um array?",
+        options: [
+          "push()",
+          "pop()",
+          "shift()",
+          "concat()"
+        ],
+        correct: 0,
+        textAfter: "O método push() insere elementos ao final do array." 
+      },
       // ... (demais questões de Desenvolvimento Web)
     ]
   },
@@ -82,7 +214,55 @@ const subjects = {
         ],
         correct: 2,
         textAfter: "A camada de Rede do modelo OSI cuida do roteamento de pacotes, determinando o caminho até o destino."
-      }
+      },
+      {
+        textBefore: "Equipamentos de rede conectam dispositivos em uma mesma LAN.",
+        question: "Qual dispositivo interliga segmentos e reduz colisões?",
+        options: [
+          "Hub",
+          "Switch",
+          "Repeater",
+          "Modem"
+        ],
+        correct: 1,
+        textAfter: "Switches enviam quadros apenas para o destino correto, diminuindo colisões."
+      },
+      {
+        textBefore: "Protocolos de configuração dinâmica facilitam o gerenciamento de IPs.",
+        question: "Para que serve o protocolo DHCP?",
+        options: [
+          "Prover endereçamento IP dinâmico",
+          "Transferir arquivos",
+          "Enviar e-mails",
+          "Realizar criptografia"
+        ],
+        correct: 0,
+        textAfter: "O DHCP distribui endereços IP automaticamente na rede."
+      },
+      {
+        textBefore: "Meios físicos de transmissão podem ser metálicos ou ópticos.",
+        question: "Qual meio utiliza filamentos de vidro para transmitir dados?",
+        options: [
+          "Fibra óptica",
+          "Par metálico",
+          "Ondas de rádio",
+          "Cabo coaxial"
+        ],
+        correct: 0,
+        textAfter: "A fibra óptica guia a luz através de filamentos de vidro ou plástico."
+      },
+      {
+        textBefore: "Diversos conceitos são essenciais em redes de computadores.",
+        question: "O que significa a sigla IP?",
+        options: [
+          "Internet Protocol",
+          "Internal Process",
+          "Interactive Program",
+          "Integrated Packet"
+        ],
+        correct: 0,
+        textAfter: "IP vem de Internet Protocol, o endereço básico de host na rede."
+      },
       // ... (demais questões de Fundamentos & Infraestrutura)
     ]
   },
@@ -100,7 +280,55 @@ const subjects = {
         ],
         correct: 2,
         textAfter: "O Diagrama de Atividades modela o fluxo de trabalho ou de atividades, mostrando a sequência de passos de um processo."
-      }
+      },
+      {
+        textBefore: "Durante a fase de levantamento de requisitos, diversas pessoas participam do projeto.",
+        question: "Quem são os stakeholders?",
+        options: [
+          "Usuários e interessados no sistema",
+          "Apenas os programadores",
+          "Os diagramas de caso de uso",
+          "Métodos de teste"
+        ],
+        correct: 0,
+        textAfter: "Stakeholders abrangem todos os envolvidos ou impactados pelo sistema."
+      },
+      {
+        textBefore: "Modelos de processo guiam o desenvolvimento do software.",
+        question: "Qual modelo é caracterizado por fases sequenciais rígidas?",
+        options: [
+          "Modelo Espiral",
+          "Kanban",
+          "Waterfall",
+          "Scrum"
+        ],
+        correct: 2,
+        textAfter: "O modelo Waterfall segue etapas lineares sem sobreposição."
+      },
+      {
+        textBefore: "Casos de uso ajudam a descrever funcionalidades do sistema.",
+        question: "O que é um caso de uso?",
+        options: [
+          "Uma técnica de teste",
+          "Uma descrição de interação entre ator e sistema",
+          "Um banco de dados",
+          "Um tipo de diagrama de rede"
+        ],
+        correct: 1,
+        textAfter: "Um caso de uso documenta como atores interagem com o sistema para alcançar um objetivo."
+      },
+      {
+        textBefore: "A etapa de projeto detalha soluções para implementar o sistema.",
+        question: "Qual documento descreve o design com diagramas e componentes?",
+        options: [
+          "Documento de Requisitos",
+          "Plano de Testes",
+          "Projeto de Software",
+          "Manual do usuário"
+        ],
+        correct: 2,
+        textAfter: "O projeto de software apresenta como o sistema será construído em detalhes."
+      },
       // ... (demais questões de Análise & Projeto)
     ]
   },
@@ -118,7 +346,55 @@ const subjects = {
         ],
         correct: 2,
         textAfter: "Testes unitários focam em componentes ou funções individuais do código, verificando sua corretude isoladamente."
-      }
+      },
+      {
+        textBefore: "Erros de software podem causar comportamentos inesperados.",
+        question: "O que é um bug?",
+        options: [
+          "Uma melhoria planejada",
+          "Uma falha ou erro no software",
+          "Um tipo de teste automatizado",
+          "Uma ferramenta de versionamento"
+        ],
+        correct: 1,
+        textAfter: "Bug é qualquer defeito que faz o software agir de maneira diferente do esperado."
+      },
+      {
+        textBefore: "Nem sempre é possível escrever todos os testes antes do código.",
+        question: "Qual técnica se baseia na exploração e experiência do testador?",
+        options: [
+          "Teste baseados em especificação",
+          "Teste exploratório",
+          "Teste de regressão",
+          "Teste de carga"
+        ],
+        correct: 1,
+        textAfter: "O teste exploratório depende do conhecimento e criatividade do testador."
+      },
+      {
+        textBefore: "Durante o ciclo de vida do software, novas versões podem introduzir falhas antigas novamente.",
+        question: "Quando realizamos o teste de regressão?",
+        options: [
+          "Ao adicionar novas funcionalidades para garantir que nada existente quebrou",
+          "Somente no início do projeto",
+          "Apenas na fase de requisitos",
+          "Nunca em projetos ágeis"
+        ],
+        correct: 0,
+        textAfter: "Testes de regressão verificam se alterações recentes não afetaram funcionalidades já implementadas."
+      },
+      {
+        textBefore: "Frameworks auxiliam a automatização de testes.",
+        question: "Ferramentas como JUnit e PyTest são usadas para quê?",
+        options: [
+          "Criar documentação",
+          "Automatizar testes unitários",
+          "Gerenciar bancos de dados",
+          "Monitorar redes"
+        ],
+        correct: 1,
+        textAfter: "Essas ferramentas permitem escrever e executar testes unitários de forma automatizada."
+      },
       // ... (demais questões de Qualidade & Testes)
     ]
   },
@@ -136,7 +412,55 @@ const subjects = {
         ],
         correct: 1,
         textAfter: "Um microcontrolador Arduino dedicado a controlar sensores é um exemplo típico de sistema embarcado."
-      }
+      },
+      {
+        textBefore: "Sistemas embarcados normalmente executam programas gravados em memória não volátil.",
+        question: "O que é firmware?",
+        options: [
+          "Um tipo de hardware",
+          "Software permanente gravado em memória",
+          "Um aplicativo para smartphone",
+          "Um protocolo de rede"
+        ],
+        correct: 1,
+        textAfter: "Firmware é o software que permanece gravado para controle do dispositivo embarcado."
+      },
+      {
+        textBefore: "Certas linguagens são preferidas em microcontroladores por sua eficiência.",
+        question: "Qual linguagem é muito usada em sistemas embarcados?",
+        options: [
+          "Python",
+          "Java",
+          "C",
+          "Ruby"
+        ],
+        correct: 2,
+        textAfter: "A linguagem C costuma ser escolhida pelo controle de baixo nível e performance."
+      },
+      {
+        textBefore: "Para gravar o código em um microcontrolador utiliza-se um equipamento específico.",
+        question: "Como se chama o aparelho utilizado para gravar o programa no chip?",
+        options: [
+          "Compilador",
+          "Debugger",
+          "Gravador (programador)",
+          "Editor de texto"
+        ],
+        correct: 2,
+        textAfter: "O gravador, ou programador, transfere o firmware para a memória do microcontrolador."
+      },
+      {
+        textBefore: "Alguns sistemas embarcados precisam responder a eventos em tempo determinado.",
+        question: "Qual a principal vantagem de usar um sistema operacional de tempo real (RTOS)?",
+        options: [
+          "Permitir acesso remoto via web",
+          "Garantir resposta previsível a eventos",
+          "Reduzir o consumo de energia pela metade",
+          "Evitar a necessidade de programação"
+        ],
+        correct: 1,
+        textAfter: "Um RTOS assegura que tarefas críticas cumpram prazos definidos com precisão."
+      },
       // ... (demais questões de Sistemas Embarcados)
     ]
   }
